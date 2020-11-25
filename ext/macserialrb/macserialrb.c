@@ -47,6 +47,7 @@ get_serialinfo(VALUE model)
     if (strcmp(ApplePlatformData[idx].productName, rb_string_value_cstr(&model)) == 0)
     {
       info.modelIndex = idx;
+      break;
     }
   }
 
