@@ -6,14 +6,17 @@ This is the Ruby version of the macserial, you can check the [source](https://gi
 
 List all the models
 
-```
+```ruby
 Macserialrb.models
 ```
 
-Todo
+Generate SystemSerialNumber and MLB
 
-- Generate SystemSerialNumber
-- Generate MLB
+```ruby
+Macserialrb.generate model: "iMac19,1"
+
+{:productName=>"iMac19,1", :SystemSerialNumber=>"C02YRRYRJV3Q", :MLB=>"C02921306QXLNV9A8"}
+```
 
 ## Installation
 
