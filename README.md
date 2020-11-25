@@ -15,8 +15,16 @@ Generate SystemSerialNumber and MLB
 ```ruby
 Macserialrb.generate model: "iMac19,1"
 
-{:productName=>"iMac19,1", :SystemSerialNumber=>"C02YRRYRJV3Q", :MLB=>"C02921306QXLNV9A8"}
+{
+  productName: "iMac19,1",
+  SystemSerialNumber: "C02YRRYRJV3Q",
+  MLB: "C02921306QXLNV9A8"
+}
 ```
+
+Todo
+
+- Add the year option
 
 ## Installation
 
