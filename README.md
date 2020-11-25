@@ -1,5 +1,7 @@
 # Macserialrb
 
+[![Gem Version](https://badge.fury.io/rb/macserialrb.svg)](https://badge.fury.io/rb/macserialrb)
+
 This is the Ruby version of the macserial, you can check the [source](https://github.com/acidanthera/OpenCorePkg/tree/master/Utilities/macserial) here
 
 ## Usage
