@@ -26,8 +26,10 @@ $ macserialrb -m iMac19,1
 iMac19,1 macserial info
 
 productName: iMac19,1
-SystemSerialNumber: C02DX0VSJV3Q
-MLB: C02053301CDLNV9CB
+SystemSerialNumber: C02CV0XNJV3Q
+MLB: C02024101GULNV9FB
+SystemUUID: 5DD65CCD-61DC-40C3-8667-00E75ED6E9A0
+ROM: 28201A05BECA
 ```
 
 ## Installation
