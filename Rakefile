@@ -5,10 +5,10 @@ RSpec::Core::RakeTask.new(:spec)
 
 require "rake/extensiontask"
 
-task :build => :compile
+task build: :compile
 
 Rake::ExtensionTask.new("macserialrb") do |ext|
   ext.lib_dir = "lib/macserialrb"
 end
 
-task :default => [:clobber, :compile, :spec]
+task default: [:clobber, :compile, :spec]
