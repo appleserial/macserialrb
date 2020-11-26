@@ -19,9 +19,6 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
-    
-    - name: Install - Dependencies
-      run: bundle install
 
-    - name: Install - Dependencies
+    - name: test
       run: bundle exec rake
