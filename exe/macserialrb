@@ -1,3 +1,38 @@
 #!/usr/bin/env ruby
 
+require "optparse"
 require "macserialrb"
+
+options = {}
+OptionParser.new { |parser|
+  parser.banner = "Usage: macserialrb [options]"
+
+  parser.on("-v", "--version", "macserialrb version") do |v|
+    options[:version] = v
+  end
+
+  parser.on("-l", "--list", "list all mac models") do |v|
+    options[:list] = v
+  end
+
+  parser.on("-m", "--model [iMac19,1]", String, "mac model") do |v|
+    options[:model] = v
+  end
+}.parse!
+
+if options[:version]
+  puts ["Macserialrb", Macserialrb::VERSION].join " "
+  exit 0
+end
+
+if options[:list]
+  puts Macserialrb.models
+  exit 0
+end
+
+info = Macserialrb.generate options.slice(:model)
+
+puts "#{options[:model]} macserial info \n\n"
+info.each do |k, v|
+  puts [k, v].join(": ")
+end
