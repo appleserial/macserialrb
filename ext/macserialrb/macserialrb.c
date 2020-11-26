@@ -59,9 +59,10 @@ generate(int argc, VALUE *argv, VALUE self)
 {
   VALUE model = Qnil;
   VALUE obj   = rb_hash_new();
-  VALUE productName = Qnil;
+
+  VALUE productName        = Qnil;
   VALUE SystemSerialNumber = Qnil;
-  VALUE MLB = Qnil;
+  VALUE MLB                = Qnil;
 
   for (int i = 0; i < argc; ++i)
   {
