@@ -59,6 +59,9 @@ generate(int argc, VALUE *argv, VALUE self)
 {
   VALUE model = Qnil;
   VALUE obj   = rb_hash_new();
+  VALUE productName = Qnil;
+  VALUE SystemSerialNumber = Qnil;
+  VALUE MLB = Qnil;
 
   for (int i = 0; i < argc; ++i)
   {
@@ -80,9 +83,9 @@ generate(int argc, VALUE *argv, VALUE self)
     get_mlb(&info, mlb, MLB_MAX_SIZE);
     sprintf(ssn, "%s%s%s%s%s", info.country, info.year, info.week, info.line, info.model);
 
-    VALUE productName = rb_str_new2(ApplePlatformData[info.modelIndex].productName);
-    VALUE SystemSerialNumber = rb_str_new2(ssn);
-    VALUE MLB = rb_str_new2(mlb);
+    productName = rb_str_new2(ApplePlatformData[info.modelIndex].productName);
+    SystemSerialNumber = rb_str_new2(ssn);
+    MLB = rb_str_new2(mlb);
 
     rb_hash_aset(obj, rb_to_symbol( rb_str_new2("productName") ), productName);
     rb_hash_aset(obj, rb_to_symbol( rb_str_new2("SystemSerialNumber") ), SystemSerialNumber);
