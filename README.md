@@ -10,25 +10,25 @@ This is the Ruby version of the macserial, you can check the [source](https://gi
 
 List all the models
 
-```ruby
-Macserialrb.models
+```bash
+$ macserialrb -l
+MacBook1,1
+MacBook10,1
+MacBook2,1
+...
 ```
 
 Generate SystemSerialNumber and MLB
 
 ```ruby
-Macserialrb.generate model: "iMac19,1"
+$ macserialrb -m iMac19,1
 
-{
-  productName: "iMac19,1",
-  SystemSerialNumber: "C02YRRYRJV3Q",
-  MLB: "C02921306QXLNV9A8"
-}
+iMac19,1 macserial info
+
+productName: iMac19,1
+SystemSerialNumber: C02DX0VSJV3Q
+MLB: C02053301CDLNV9CB
 ```
-
-Todo
-
-- Add the year option
 
 ## Installation
 
@@ -65,3 +65,7 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the Macserialrb project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/csrutil/macserialrb/blob/master/CODE_OF_CONDUCT.md).
+
+## Credits
+
+- https://github.com/acidanthera/OpenCorePkg
