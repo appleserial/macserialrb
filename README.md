@@ -1,5 +1,6 @@
 # Macserialrb
 
+[![Build Status](https://travis-ci.org/csrutil/macserialrb.svg?branch=main)](https://travis-ci.org/csrutil/macserialrb)
 [![Gem Version](https://badge.fury.io/rb/macserialrb.svg)](https://badge.fury.io/rb/macserialrb)
 ![](https://ruby-gem-downloads-badge.herokuapp.com/macserialrb)
 
