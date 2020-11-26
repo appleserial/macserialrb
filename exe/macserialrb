@@ -2,11 +2,12 @@
 
 require "optparse"
 require "macserialrb"
+require "securerandom"
 
 options = {}
-OptionParser.new { |parser|
-  parser.banner = "Usage: macserialrb [options]"
 
+op = OptionParser.new do |parser|
+  parser.banner = "Usage: macserialrb [options]"
   parser.on("-v", "--version", "macserialrb version") do |v|
     options[:version] = v
   end
@@ -18,7 +19,14 @@ OptionParser.new { |parser|
   parser.on("-m", "--model [iMac19,1]", String, "mac model") do |v|
     options[:model] = v
   end
-}.parse!
+end
+
+if ARGV.length == 0
+  op.parse! %w[--help]
+  exit 0
+else
+  op.parse!
+end
 
 if options[:version]
   puts ["Macserialrb", Macserialrb::VERSION].join " "
@@ -31,6 +39,9 @@ if options[:list]
 end
 
 info = Macserialrb.generate options.slice(:model)
+
+info[:SystemUUID] = SecureRandom.uuid.upcase
+info[:ROM] = SecureRandom.hex(6).upcase
 
 puts "#{options[:model]} macserial info \n\n"
 info.each do |k, v|
