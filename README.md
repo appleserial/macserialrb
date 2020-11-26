@@ -10,7 +10,7 @@ This is the Ruby version of the macserial, you can check the [source](https://gi
 
 List all the models
 
-```bash
+```ruby
 $ macserialrb -l
 MacBook1,1
 MacBook10,1
