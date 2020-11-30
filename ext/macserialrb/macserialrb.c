@@ -1,18 +1,5 @@
 #include "macserialrb.h"
 
-#include <limits.h>
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <string.h>
-#include <time.h>
-
-#ifdef __APPLE__
-#include <CoreFoundation/CoreFoundation.h>
-#include <IOKit/IOKitLib.h>
-#endif
-
 #include "macserial/macserial.h"
 #include "macserial/modelinfo.h"
 #include "macserial/macserial.c"
